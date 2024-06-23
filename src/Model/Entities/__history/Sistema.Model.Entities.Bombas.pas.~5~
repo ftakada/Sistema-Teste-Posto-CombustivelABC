@@ -1,0 +1,20 @@
+unit Sistema.Model.Entities.Bombas;
+
+interface
+
+
+type
+  TTanques = class
+  private
+    FId: Integer;
+    FDescricao: string;
+    FId_Tanque : Integer;
+  public
+    property ID: Integer read FID write FID;
+    property DESCRICAO: string read FDESCRICAO write FDESCRICAO;
+    property ID_TANQUE: Integer read FID_TANQUE write FID_TANQUE;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,84 @@
+unit Sistema.View.Principal;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Vcl.Menus,
+  StrUtils,
+  FireDAC.Stan.Intf,
+  FireDAC.Comp.UI,
+  FireDAC.UI.Intf,
+  FireDAC.VCLUI.Wait,
+  System.Actions,
+  Vcl.ActnList,
+  Vcl.PlatformDefaultStyleActnCtrls,
+  Vcl.ActnMan,
+  Sistema.Model.Connection.Factory,
+  Sistema.View.Tanques,
+  Sistema.View.Bombas;
+
+type
+  TViewPrincipal = class(TForm)
+    MainMenu: TMainMenu;
+    MenuItemCadastro: TMenuItem;
+    MenuItemCadTanques: TMenuItem;
+    MenuItemLancamentos: TMenuItem;
+    MenuItemUtilitarios: TMenuItem;
+    MenuItemTesteConexao: TMenuItem;
+    MenuItemTesteGerador: TMenuItem;
+    ActionManager: TActionManager;
+    ATanques: TAction;
+    ABombas: TAction;
+    AAbastecimentos: TAction;
+    FDGUIxWaitCursor: TFDGUIxWaitCursor;
+    MenuItemCadBombas: TMenuItem;
+    procedure MenuItemTesteConexaoClick(Sender: TObject);
+    procedure ATanquesExecute(Sender: TObject);
+    procedure ABombasExecute(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewPrincipal: TViewPrincipal;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewPrincipal.ABombasExecute(Sender: TObject);
+begin
+  if ViewBombas = nil then
+    ViewBombas := TViewBombas.Create(Self);
+  ViewBombas.Show;
+  ViewBombas.BringToFront;
+end;
+
+procedure TViewPrincipal.ATanquesExecute(Sender: TObject);
+begin
+  if ViewTanques = nil then
+    ViewTanques := TViewTanques.Create(Self);
+  ViewTanques.Show;
+  ViewTanques.BringToFront;
+end;
+
+procedure TViewPrincipal.MenuItemTesteConexaoClick(Sender: TObject);
+var
+  LConnected: Boolean;
+begin
+  LConnected := TModelConnectionFactory.New.Connection.ConfigurarConnection.Connected;
+  ShowMessage(Ifthen(LConnected,'Conectado com sucesso!','Conexão Falhou!'));
+end;
+
+end.

@@ -1,0 +1,4 @@
+inherited ViewBombas: TViewBombas
+  Caption = 'Bombas de combustivel'
+  TextHeight = 15
+end

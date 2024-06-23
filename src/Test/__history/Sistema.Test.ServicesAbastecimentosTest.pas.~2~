@@ -1,0 +1,40 @@
+unit Sistema.Test.ServicesAbastecimentosTest;
+
+interface
+
+uses
+  DUnitX.TestFramework;
+
+type
+  [TestFixture]
+  TServicesAbastecimentosTest = class
+  private
+    FModelServicesFactor: iModelServicesFactory;
+  public
+    [Setup]
+    procedure Setup;
+    [TearDown]
+    procedure TearDown;
+    [Test]
+    procedure CalcularImposto;
+  end;
+
+implementation
+
+procedure TServicesAbastecimentosTest.CalcularImposto;
+begin
+
+end;
+
+procedure TServicesAbastecimentosTest.Setup;
+begin
+end;
+
+procedure TServicesAbastecimentosTest.TearDown;
+begin
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TServicesAbastecimentosTest);
+
+end.

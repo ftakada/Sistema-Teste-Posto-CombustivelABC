@@ -1,0 +1,47 @@
+unit Sistema.Model.Services.Imposto;
+
+interface
+
+uses
+  Data.DB,
+  Sistema.Model.Services.Interfaces;
+
+type
+  TModelServicesImposto = class(TInterfacedObject, iModelServicesImposto)
+  private
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelServicesImposto;
+    function CalcularImposto(out AValor: Currency): iModelServicesImposto;
+  end;
+
+
+implementation
+
+
+
+{ TModelServicesImposto }
+
+function TModelServicesImposto.CalcularImposto(out AValor: Currency): iModelServicesImposto;
+begin
+
+end;
+
+constructor TModelServicesImposto.Create;
+begin
+
+end;
+
+destructor TModelServicesImposto.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelServicesImposto.New: iModelServicesImposto;
+begin
+  Result := Self.Create;
+end;
+
+end.

@@ -1,0 +1,63 @@
+unit Sistema.Controller;
+
+interface
+
+
+type
+  TControllerServicesEntities = class(TInterfacedObject, iController)
+  private
+    FTanques: iModelDAO<TTanques>;
+    FBombas: iModelDAO<TBombas>;
+    FAbastecimentos: iModelDAO<TAbastecimentos>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New : iControllerServicesEntities;
+    function Tanques: iModelDAO<TTanques>;
+    function Bombas: iModelDAO<TBombas>;
+    function Abastecimentos: iModelDAO<TAbastecimentos>;
+  end;
+
+implementation
+
+
+{ TControllerServicesEntities }
+
+function TControllerServicesEntities.Abastecimentos: iModelDAO<TAbastecimentos>;
+begin
+  if not Assigned(FAbastecimentos) then
+    FAbastecimentos := TModelDAOFactory<TAbastecimentos>.New.DAO;
+  Result := FAbastecimentos;
+end;
+
+function TControllerServicesEntities.Bombas: iModelDAO<TBombas>;
+begin
+  if not Assigned(FBombas) then
+    FBombas := TModelDAOFactory<TBombas>.New.DAO;
+  Result := FBombas;
+end;
+
+constructor TControllerServicesEntities.Create;
+begin
+
+end;
+
+destructor TControllerServicesEntities.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TControllerServicesEntities.New: iControllerServicesEntities;
+begin
+  Result := Self.Create;
+end;
+
+function TControllerServicesEntities.Tanques: iModelDAO<TTanques>;
+begin
+  if not Assigned(FTanques) then
+    FTanques := TModelDAOFactory<TTanques>.New.DAO;
+  Result := FTanques;
+end;
+
+end.

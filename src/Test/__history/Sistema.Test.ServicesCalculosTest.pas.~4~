@@ -1,0 +1,45 @@
+unit Sistema.Test.ServicesCalculosTest;
+
+interface
+
+uses
+  DUnitX.TestFramework,
+  Sistema.Model.Services.Interfaces,
+  Sistema.Model.Services.Calculos;
+
+type
+  [TestFixture]
+  TServicesCalculosTest = class
+  private
+    FModelServicesCalculos : iModelServicesCalculos;
+  public
+    [Setup]
+    procedure Setup;
+    [TearDown]
+    procedure TearDown;
+    [Test]
+    procedure CalcularImposto;
+  end;
+
+implementation
+
+procedure TServicesCalculosTest.CalcularImposto;
+var
+  LResultado: Currency;
+begin
+  //Assert.AreEqual(FModelServicesFactor.Calculos. 50.00,13.00,6.50);
+end;
+
+procedure TServicesCalculosTest.Setup;
+begin
+  //FModelServicesFactor := TModelServicesFactory.New;
+end;
+
+procedure TServicesCalculosTest.TearDown;
+begin
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TServicesCalculosTest);
+
+end.

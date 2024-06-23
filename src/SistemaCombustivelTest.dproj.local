@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>2024/06/23 13:17:14.000.047,=C:\Users\FABIO\Documents\Embarcadero\Studio\Projects\Unit1.pas</Transaction>
+    <Transaction>2024/06/23 13:18:45.000.566,C:\Users\FABIO\Documents\Embarcadero\Studio\Projects\Unit1.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Test\Sistema.Test.ConnectionTest.pas</Transaction>
+    <Transaction>2024/06/23 13:19:26.000.055,C:\Users\FABIO\Documents\Embarcadero\Studio\Projects\Project1.dproj=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\SistemaCombustivelTest.dproj</Transaction>
+    <Transaction>2024/06/23 13:21:16.000.757,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Connection\Sistema.Model.Connection.Interfaces.pas</Transaction>
+    <Transaction>2024/06/23 13:21:16.000.683,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Connection\Sistema.Model.Connection.Factory.pas</Transaction>
+    <Transaction>2024/06/23 13:21:16.000.727,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Connection\Sistema.Model.Connection.Firedac.pas</Transaction>
+    <Transaction>2024/06/23 13:21:16.000.779,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Connection\Sistema.Model.Connection.Query.Firedac.pas</Transaction>
+    <Transaction>2024/06/23 13:22:12.000.446,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Util\Sistema.Model.Util.Funcoes.pas</Transaction>
+    <Transaction>2024/06/23 13:22:25.000.921,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Exception\Sistema.Sitema.Model.Exception.MinhaExcecao.pas</Transaction>
+    <Transaction>2024/06/23 13:23:38.000.607,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\DAO\Sistema.Model.DAO.Interfaces.pas</Transaction>
+    <Transaction>2024/06/23 13:23:38.000.631,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\DAO\Sistema.Model.DAO.SQL.pas</Transaction>
+    <Transaction>2024/06/23 13:23:38.000.581,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\DAO\Sistema.Model.DAO.Factory.pas</Transaction>
+    <Transaction>2024/06/23 13:23:50.000.054,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Util\Sistema.Model.Util.SQLGerador.pas</Transaction>
+    <Transaction>2024/06/23 16:05:35.000.808,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
+    <Transaction>2024/06/23 16:07:41.000.134,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
+    <Transaction>2024/06/23 16:08:22.000.546,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Factory.pas</Transaction>
+    <Transaction>2024/06/23 16:08:22.000.456,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Abastecimentos.pas</Transaction>
+    <Transaction>2024/06/23 16:08:22.000.484,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Bombas.pas</Transaction>
+    <Transaction>2024/06/23 16:08:22.000.581,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Interfaces.pas</Transaction>
+    <Transaction>2024/06/23 16:08:22.000.606,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Tanques.pas</Transaction>
+    <Transaction>2024/06/23 16:08:34.000.077,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Controller\Sistema.Controller.Interfaces.pas</Transaction>
+    <Transaction>2024/06/23 16:08:34.000.109,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Controller\Sistema.Controller.pas</Transaction>
+    <Transaction>2024/06/23 16:08:52.000.639,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Entities\Sistema.Model.Entities.Bombas.pas</Transaction>
+    <Transaction>2024/06/23 16:08:52.000.704,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Entities\Sistema.Model.Entities.Clientes.pas</Transaction>
+    <Transaction>2024/06/23 16:08:52.000.733,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Entities\Sistema.Model.Entities.Tanques.pas</Transaction>
+    <Transaction>2024/06/23 16:08:52.000.611,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Entities\Sistema.Model.Entities.Abastecimentos.pas</Transaction>
+    <Transaction>2024/06/23 16:10:41.000.506,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Test\Sistema.Test.ServicesAbastecimentosTest.pas</Transaction>
+    <Transaction>2024/06/23 16:32:24.000.670,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
+    <Transaction>2024/06/23 16:33:58.000.103,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Calculos.pas</Transaction>
+    <Transaction>2024/06/23 16:38:53.000.587,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Test\Sistema.Test.ServicesAbastecimentosTest.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Test\Sistema.Test.ServicesCalculosTest.pas</Transaction>
+  </Transactions>
+</BorlandProject>

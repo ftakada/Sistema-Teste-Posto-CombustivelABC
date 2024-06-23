@@ -1,0 +1,26 @@
+unit Sistema.Model.Connection.Interfaces;
+
+interface
+
+uses
+  FireDAC.Comp.Client;
+
+type
+
+  iModelConnection = interface
+  ['{17EFEF18-E794-4F14-9F07-A1EBC30F22B1}']
+    function ConfigurarConnection: iModelConnection;
+    function Connect: iModelConnection;
+    function Disconnect: iModelConnection;
+    function Reconnect: iModelConnection;
+    function GetConnection: TFDCustomConnection;
+    function Connected: Boolean;
+  end;
+
+  iModelConnectionFactory = interface
+  ['{907B5E91-3716-429A-B148-3A909778B1FB}']
+    function Connection: iModelConnection;
+  end;
+
+implementation
+end.

@@ -1,0 +1,39 @@
+unit Sistema.Model.Types;
+
+interface
+
+uses
+  System.SysUtils;
+
+type
+   TTipoCombustivel = (tpGasolina,tpOleoDiesel);
+   TObjectState = (stBrowse,stInsert,sEdit);
+
+   TTipoCombustivelHelper = record helper for TTipoCombustivel
+     function Valor(ATipo : string) : TTipoCombustivel; overload;
+     function Valor(ATipo : TTipoCombustivel) : string;  overload;
+   end;
+implementation
+
+{ TTipoCombustivelHelper }
+
+function TTipoCombustivelHelper.Valor(ATipo: TTipoCombustivel): string;
+begin
+  case ATipo of
+    tpGasolina: Result := 'G';
+    tpOleoDiesel: Result := 'O';
+    else Result := '';
+  end;
+end;
+
+function TTipoCombustivelHelper.Valor(ATipo: string): TTipoCombustivel;
+begin
+  if SameText(ATipo, 'G') then
+    Result := tpGasolina
+  else if SameText(ATipo, 'O') then
+    Result := tpOleoDiesel
+  else
+    raise Exception.Create('Tipo desconhecido: ' + ATipo);
+end;
+
+end.

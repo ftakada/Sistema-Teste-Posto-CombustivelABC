@@ -1,0 +1,53 @@
+unit Sistema.View.Tanques;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms, Vcl.Dialogs,
+  Data.DB,
+  Vcl.StdCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids,
+  Sistema.View.Padrao,
+  Sistema.Controller.Services.Entities.Interfaces,
+  Sistema.Controller.Services.Entities;
+
+type
+  TViewTanques = class(TViewPadrao)
+    procedure FormClose(Sender: TObject; var Action: TCloseAction);
+    procedure FormCreate(Sender: TObject);
+  private
+    { Private declarations }
+    FControllerServicesEntities: iControllerServicesEntities;
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewTanques: TViewTanques;
+
+implementation
+
+{$R *.dfm}
+
+procedure TViewTanques.FormClose(Sender: TObject; var Action: TCloseAction);
+begin
+  inherited;
+  Action := caFree;
+  ViewTanques := nil;
+end;
+
+procedure TViewTanques.FormCreate(Sender: TObject);
+begin
+  inherited;
+  FControllerServicesEntities := TControllerServicesEntities.New;
+end;
+
+end.

@@ -1,0 +1,38 @@
+unit Sistema.View.RelatorioPadrao;
+
+interface
+
+uses
+  Winapi.Windows,
+  Winapi.Messages,
+  System.SysUtils,
+  System.Variants,
+  System.Classes,
+  Vcl.Graphics,
+  Vcl.Controls,
+  Vcl.Forms,
+  Vcl.Dialogs,
+  Data.DB,
+  Vcl.StdCtrls,
+  Vcl.Grids,
+  Vcl.DBGrids;
+
+type
+  TViewRelatorioPadrao = class(TForm)
+    DBGridLista: TDBGrid;
+    BtnFiltrar: TButton;
+    DtSrc: TDataSource;
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  ViewRelatorioPadrao: TViewRelatorioPadrao;
+
+implementation
+
+{$R *.dfm}
+
+end.

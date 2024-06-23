@@ -1,0 +1,19 @@
+unit Sistema.Controller.Services.Entities.Interfaces;
+
+interface
+
+uses
+  Sistema.Model.DAO.Interfaces,
+  Sistema.Model.Entities.Tanques;
+
+type
+
+  iControllerServicesEntities = interface
+    ['{88B8DD03-7B0A-4092-86F0-89556314A327}']
+    function Tanques: iModelDAO<TTanques>;
+    function Bombas: iModelDAO<TBombas>;
+  end;
+
+implementation
+
+end.

@@ -1,0 +1,30 @@
+unit Sistema.Model.Entities.Abastecimentos;
+
+interface
+
+
+type
+  TAbastecimentos = class
+  private
+    FId: Integer;
+    FData: TDate;
+    FId_Bomba: Integer;
+    FValor_Abastecido: Currency;
+    FPercentual_Imposto: Currency;
+    FValor_Imposto: Currency;
+  public
+    property Id: Integer read FID write FID;
+    property Descricao: string read FDescricao write FDescricao;
+    property Id_Tanque: Integer read FId_Tanque write FId_Tanque;
+  end;
+
+
+      ID                  INTERGER NOT NULL /* INTERGER = INTEGER */,
+    DATA                "DATE" NOT NULL /* "DATE" = DATE */,
+    ID_BOMBA            INTERGER NOT NULL /* INTERGER = INTEGER */,
+    VALOR_ABASTECIDO    "DECIMAL(15,2)" NOT NULL /* "DECIMAL(15,2)" = DECIMAL(15,2) */,
+    VALOR_IMPOSTO       "DECIMAL(15,2)" NOT NULL /* "DECIMAL(15,2)" = DECIMAL(15,2) */,
+    PERCENTUAL_IMPOSTO
+implementation
+
+end.

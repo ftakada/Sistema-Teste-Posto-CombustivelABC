@@ -1,0 +1,35 @@
+unit Sistema.Model.DAO.Factory;
+
+interface
+uses
+  Sistema.Model.DAO.Interfaces,
+  Sistema.Model.DAO.SQL;
+type
+  TModelDAOFactory<T: class, constructor> = class(TInterfacedObject, IModelDAOFactory<T>)
+  private
+    FDAO: IModelDAO<T>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: IModelDAOFactory<T>;
+    function DAO: iModelDAO<T>;
+  end;
+implementation
+{ TModelDAOFactory<T> }
+constructor TModelDAOFactory<T>.Create;
+begin
+  FDAO := TModelDAOSQL<T>.New;
+end;
+function TModelDAOFactory<T>.DAO: IModelDAO<T>;
+begin
+  Result := FDAO;
+end;
+destructor TModelDAOFactory<T>.Destroy;
+begin
+  inherited;
+end;
+class function TModelDAOFactory<T>.New: IModelDAOFactory<T>;
+begin
+  Result := Self.Create;
+end;
+end.

@@ -1,0 +1,37 @@
+unit Sistema.Model.Services.Entities.Interfaces;
+
+interface
+
+uses
+  Data.DB,
+  Sistema.Model.Entities.Tanques,
+  Sistema.Model.Entities.Bombas,
+  Sistema.Model.Entities.Abastecimentos;
+
+type
+
+  iModelServices<T: class, constructor> = interface
+  ['{A5E4352A-7EA6-4CC7-82AA-B146EF3B095A}']
+    function NewObject: T;
+    function Current: T;
+    function UpdateObject: iModelServices<T>;
+    function Insert: iModelServices<T>;
+    function Update: iModelServices<T>;
+    function Delete: iModelServices<T>;
+    function Listar : iModelServices<T>;
+    function ListarPorId(AId: Integer): iModelServices<T>;
+    function ListarPorWhere(AWhere: string): iModelServices<T>;
+    function DataSource(ADatasource: TDataSource): iModelServices<T>;
+  end;
+
+  iModelServicesEntitiesFactory = interface
+  ['{E0B69106-5F3A-4E11-805C-6284ABD8138A}']
+    function Tanques: iModelServices<TTanques>;
+    function Bombas:iModelServices<TBombas>;
+    function Abastecimentos: iModelServices<TAbastecimentos>;
+  end;
+
+implementation
+
+end.
+

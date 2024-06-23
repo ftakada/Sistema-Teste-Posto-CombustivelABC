@@ -1,0 +1,25 @@
+unit Sistema.Model.Entities.Abastecimentos;
+
+interface
+
+
+type
+  TAbastecimentos = class
+  private
+    FId: Integer;
+    FData: TDate;
+    FId_Bomba: Integer;
+    FValor_Abastecido: Currency;
+    FPercentual_Imposto: Currency;
+    FValor_Imposto: Currency;
+  public
+    property Id: Integer read FID write FID;
+    property Data: TDate read FData write FData;
+    property Id_Bomba: Integer read FId_Bomba write FId_Bomba;
+    property Valor_Abastecido: Currency read FValor_Abastecido write FValor_Abastecido;
+  end;
+
+
+implementation
+
+end.

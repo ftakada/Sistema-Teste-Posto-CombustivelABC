@@ -1,0 +1,64 @@
+unit Sistema.Model.Services.Factory;
+
+interface
+
+uses
+  Sistema.Model.Services.Interfaces,
+  Sistema.Model.Entities.Tanques,
+  Sistema.Model.Entities.Bombas,
+  Sistema.Model.Entities.Abastecimentos, Sistema.Model.Services.Tanques;
+
+type
+  TModelServicesFactory = class(TInterfacedObject, iModelServicesFactory)
+  private
+    FTanques: iModelServicesEntities<TTanques>;
+    FBombas:iModelServicesEntities<TBombas>;
+    FAbastecimentos: iModelServicesEntities<TAbastecimentos>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelServicesFactory;
+    function Tanques: iModelServicesEntities<TTanques>;
+    function Bombas:iModelServicesEntities<TBombas>;
+    function Abastecimentos: iModelServicesEntities<TAbastecimentos>;
+  end;
+
+implementation
+
+
+{ TModelServicesFactory }
+
+function TModelServicesFactory.Abastecimentos: iModelServicesEntities<TAbastecimentos>;
+begin
+
+end;
+
+function TModelServicesFactory.Bombas: iModelServicesEntities<TBombas>;
+begin
+
+end;
+
+constructor TModelServicesFactory.Create;
+begin
+
+end;
+
+destructor TModelServicesFactory.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelServicesFactory.New: iModelServicesFactory;
+begin
+
+end;
+
+function TModelServicesFactory.Tanques: iModelServicesEntities<TTanques>;
+begin
+  if not Assigned(FTanques) then
+    FTanques := TModelServicesTanques.New;
+  Result := FTanques;
+end;
+
+end.

@@ -1,0 +1,48 @@
+unit Sistema.Model.Services.Calculos;
+
+interface
+
+uses
+  Sistema.Model.Services.Interfaces;
+
+type
+  TModelServicesTanques = class(TInterfacedObject, iModelServicesCalculos)
+  private
+
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelServicesCalculos;
+    function CalcularImposto(AValorAbastecido: Currency; APorcentagemImposto: Currency): Currency;
+  end;
+
+
+implementation
+
+
+
+
+{ TModelServicesTanques }
+
+function TModelServicesTanques.CalcularImposto(AValorAbastecido, APorcentagemImposto: Currency): Currency;
+begin
+
+end;
+
+constructor TModelServicesTanques.Create;
+begin
+
+end;
+
+destructor TModelServicesTanques.Destroy;
+begin
+
+  inherited;
+end;
+
+class function TModelServicesTanques.New: iModelServicesCalculos;
+begin
+
+end;
+
+end.

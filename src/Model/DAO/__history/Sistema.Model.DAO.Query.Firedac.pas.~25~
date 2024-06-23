@@ -1,0 +1,94 @@
+unit Sistema.Model.DAO.Query.Firedac;
+
+interface
+
+uses
+  FireDAC.Comp.Client,
+  System.SysUtils,
+  System.IniFiles,
+  FireDAC.Phys.FB,
+  FireDAC.Stan.Def,
+  FireDAC.Stan.Async,
+  FireDAC.DApt,
+  Data.DB,
+  Sistema.Model.DAO.Interfaces,
+  Sistema.Model.Connection.Interfaces;
+
+type
+
+  TModelQueryFiredac = class(TInterfacedObject, iModelQuery)
+  private
+    [weak]
+    FConnection: iModelConnection;
+    FFDQuery: TFDQuery;
+  public
+    constructor Create(AConnection: iModelConnection);
+    destructor Destroy; override;
+    class function New(AConnection: iModelConnection): iModelQuery;
+    function ExecutaSQL(ASQL : string) : iModelQuery;
+    function Query: TFDQuery;
+    function SQL(ASQL: string): iModelQuery;
+    function Open: iModelQuery;
+    function Close: iModelQuery;
+  end;
+
+implementation
+
+{ TModelQueryFiredac }
+
+function TModelQueryFiredac.Close: iModelQuery;
+begin
+  Result := Self;
+  FFDQuery.Close;
+end;
+
+constructor TModelQueryFiredac.Create(AConnection: iModelConnection);
+begin
+  FFDQuery := TFDQuery.Create(nil);
+  FFDQuery.Connection := FConnection.GetConnection;;
+end;
+
+destructor TModelQueryFiredac.Destroy;
+begin
+  inherited;
+  if Assigned(FFDQuery) then
+    FFDQuery.Disposeof;
+end;
+
+function TModelQueryFiredac.ExecutaSQL(ASQL: string): iModelQuery;
+var
+  LFDQuery : TFDQuery;
+begin
+  Result := Self;
+  try
+    LFDQuery := TFDQuery.Create(nil);
+    LFDQuery.Connection := TFDConnection(FConnection);
+    LFDQuery.ExecSQL(ASQL);
+  finally
+    LFDQuery.DisposeOf;
+  end;
+end;
+
+class function TModelQueryFiredac.New(AConnection: iModelConnection): iModelQuery;
+begin
+  Result := Self.Create(AConnection);
+end;
+
+function TModelQueryFiredac.Open: iModelQuery;
+begin
+
+end;
+
+function TModelQueryFiredac.Query: TFDQuery;
+begin
+  Result := FFDQuery;
+end;
+
+function TModelQueryFiredac.SQL(ASQL: string): iModelQuery;
+begin
+  Result := Self;
+  FFDQuery.SQL.Text := ASQL;
+end;
+
+end.
+

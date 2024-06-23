@@ -1,0 +1,63 @@
+unit Sistema.View.ConfigurarIni;
+
+interface
+
+uses
+  Vcl.Forms, Vcl.StdCtrls, Vcl.Controls, Vcl.ExtCtrls, System.Classes, System.IniFiles;
+
+type
+  TViewConfigurarIni = class(TForm)
+    LabelDatabase: TLabel;
+    LabelUser: TLabel;
+    LabelPassword: TLabel;
+    LabelServer: TLabel;
+    EditDatabase: TEdit;
+    EditUser: TEdit;
+    EditPassword: TEdit;
+    EditServer: TEdit;
+    ButtonSave: TButton;
+    ButtonCancel: TButton;
+    procedure ButtonSaveClick(Sender: TObject);
+    procedure ButtonCancelClick(Sender: TObject);
+  private
+    FIniFileName: string;
+  public
+    constructor Create(AOwner: TComponent; const AIniFileName: string); reintroduce;
+  end;
+
+var
+  FormConfigurarIni: TViewConfigurarIni;
+
+implementation
+
+{$R *.dfm}
+
+constructor TViewConfigurarIni.Create(AOwner: TComponent; const AIniFileName: string);
+begin
+  inherited Create(AOwner);
+  FIniFileName := AIniFileName;
+end;
+
+procedure TViewConfigurarIni.ButtonSaveClick(Sender: TObject);
+var
+  IniFile: TIniFile;
+begin
+  IniFile := TIniFile.Create(FIniFileName);
+  try
+    IniFile.WriteString('Database', 'Database', EditDatabase.Text);
+    IniFile.WriteString('Database', 'User', EditUser.Text);
+    IniFile.WriteString('Database', 'Password', EditPassword.Text);
+    IniFile.WriteString('Database', 'Server', EditServer.Text);
+    ModalResult := mrOk;
+  finally
+    IniFile.Free;
+  end;
+end;
+
+procedure TViewConfigurarIni.ButtonCancelClick(Sender: TObject);
+begin
+  ModalResult := mrCancel;
+end;
+
+end.
+

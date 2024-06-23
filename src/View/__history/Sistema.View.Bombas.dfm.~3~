@@ -1,0 +1,6 @@
+inherited ViewBombas: TViewBombas
+  Caption = 'Bombas de combustivel'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  TextHeight = 15
+end

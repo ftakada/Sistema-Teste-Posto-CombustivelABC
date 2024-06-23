@@ -1,0 +1,24 @@
+unit Sitema.Model.Services.Tanques;
+
+interface
+
+uses
+  Sistema.Model.Services.Entities.Interfaces,
+  Sistema.Model.Entities.Tanques;
+
+type
+  TModelServicesTanques<T: class, constructor> = class(TInterfacedObject, iModelServices<T>)
+  private
+    //FDAOTanques: iModelDAO<TTanques>;
+  public
+    constructor Create;
+    destructor Destroy; override;
+    class function New: iModelServices<T>;
+  end;
+
+implementation
+
+
+{ TModelServicesTanques }
+
+end.

@@ -1,0 +1,11 @@
+inherited ViewTanques: TViewTanques
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tanques Combustivel'
+  OnClose = FormClose
+  OnCreate = FormCreate
+  TextHeight = 15
+  inherited DtSrc: TDataSource
+    Left = 664
+  end
+end

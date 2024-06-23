@@ -1,0 +1,40 @@
+unit Sistema.Test.ConnectionTest;
+
+interface
+
+uses
+  DUnitX.TestFramework,
+  Sistema.Model.Connection.Factory,
+  Sistema.Model.Connection.Interfaces,
+  System.SysUtils;
+
+type
+  [TestFixture]
+  TConnectionTest = class
+  private
+  public
+    [Test]
+    procedure TestConfigurarConnection;
+  end;
+
+implementation
+
+{ TConnectionTest }
+
+procedure TConnectionTest.TestConfigurarConnection;
+
+var
+  LModelConnectionFactory: iModelConnectionFactory;
+begin
+  Assert.WillNotRaise(
+    procedure
+    begin
+      LModelConnectionFactory.Connection.ConfigurarConnection;
+    end,
+  Exception);
+end;
+
+initialization
+  TDUnitX.RegisterTestFixture(TConnectionTest);
+
+end.

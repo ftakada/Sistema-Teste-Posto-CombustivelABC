@@ -1,0 +1,37 @@
+inherited ViewTanques: TViewTanques
+  BorderIcons = [biSystemMenu, biMinimize]
+  BorderStyle = bsSingle
+  Caption = 'Tanques Combustivel'
+  ClientHeight = 487
+  ClientWidth = 1001
+  OnClose = FormClose
+  OnCreate = FormCreate
+  ExplicitWidth = 1013
+  ExplicitHeight = 525
+  TextHeight = 15
+  inherited DBGridLista: TDBGrid
+    Top = 56
+    Width = 1001
+    Height = 431
+    Columns = <
+      item
+        Expanded = False
+        FieldName = 'ID'
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'DESCRICAO'
+        Title.Caption = 'Descri'#231#227'o do tanque'
+        Width = 293
+        Visible = True
+      end
+      item
+        Expanded = False
+        FieldName = 'TIPOCOMBUSTIVEL'
+        Title.Caption = 'Tipo de Combustivel'
+        Width = 125
+        Visible = True
+      end>
+  end
+end

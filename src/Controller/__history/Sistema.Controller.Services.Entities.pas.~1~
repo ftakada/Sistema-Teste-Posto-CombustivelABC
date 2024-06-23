@@ -1,0 +1,178 @@
+unit Sistema.Controller.Services.Entities;
+
+interface
+
+type
+  TControllerServicesEntities = class(TInterfacedObject, iControllerServicesEntities)
+  private
+    [weak]
+    FConnectionConfiguracao: iModelConnectionConfiguracao;
+    FAlteracaoCr: iModelDAOGeneric<TAlteracaoCr>;
+    FAlteracaoCrcartao: iModelDAOGeneric<TAlteracaoCrcartao>;
+    FAlteracaoCrcheques: iModelDAOGeneric<TAlteracaoCrcheques>;
+    FAlteracaoCritens: iModelDAOGeneric<TAlteracaoCritens>;
+    FBancos: iModelDAOGeneric<TBancos>;
+    FCobranca: iModelDAOGeneric<TCobranca>;
+    FCobrancaCrRemessa: iModelDAOGeneric<TCobrancaCrRemessa>;
+    FCobrancaRemessa: iModelDAOGeneric<TCobrancaRemessa>;
+    FContasBancarias: iModelDAOGeneric<TContasBancarias>;
+    FContasReceber: iModelDAOGeneric<TContasReceber>;
+    FNotasFiscais: iModelDAOGeneric<TNotasFiscais>;
+    FParametrosGeral: iModelDAOGeneric<TParametrosGeral>;
+    FRecebimentosCr: iModelDAOGeneric<TRecebimentosCr>;
+    FRecebimentosCrCr: iModelDAOGeneric<TRecebimentosCrCr>;
+    FRecebimentosCrCheques: iModelDAOGeneric<TRecebimentosCrCheques>;
+  public
+    constructor Create(AConnectionConfiguracao : iModelConnectionConfiguracao);
+    destructor Destroy; override;
+    class function New(AConnectionConfiguracao : iModelConnectionConfiguracao): iControllerServicesFinanceiroCobrancaEntities; overload;
+    class function New : iControllerServicesFinanceiroCobrancaEntities; overload;
+    function AlteracaoCr: iModelDAOGeneric<TAlteracaoCr>;
+    function AlteracaoCrcartao: iModelDAOGeneric<TAlteracaoCrcartao>;
+    function AlteracaoCrcheques: iModelDAOGeneric<TAlteracaoCrcheques>;
+    function AlteracaoCritens: iModelDAOGeneric<TAlteracaoCritens>;
+    function Bancos: iModelDAOGeneric<TBancos>;
+    function Cobranca: iModelDAOGeneric<TCobranca>;
+    function CobrancaCrRemessa: iModelDAOGeneric<TCobrancaCrRemessa>;
+    function CobrancaRemessa: iModelDAOGeneric<TCobrancaRemessa>;
+    function ContasBancarias: iModelDAOGeneric<TContasBancarias>;
+    function ContasReceber: iModelDAOGeneric<TContasReceber>;
+    function NotasFiscais: iModelDAOGeneric<TNotasFiscais>;
+    function ParametrosGeral: iModelDAOGeneric<TParametrosGeral>;
+    function RecebimentosCr: iModelDAOGeneric<TRecebimentosCr>;
+    function RecebimentosCrCr: iModelDAOGeneric<TRecebimentosCrCr>;
+    function RecebimentosCrCheques: iModelDAOGeneric<TRecebimentosCrCheques>;
+
+  end;
+
+implementation
+
+function TControllerServicesFinanceiroCobrancaEntities.AlteracaoCr: iModelDAOGeneric<TAlteracaoCr>;
+begin
+  if not Assigned(FAlteracaoCr) then
+    FAlteracaoCr := TModelDAOFactory<TAlteracaoCr>.New(FConnectionConfiguracao).DAO;
+  Result := FAlteracaoCr;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.AlteracaoCrcartao: iModelDAOGeneric<TAlteracaoCrcartao>;
+begin
+  if not Assigned(FAlteracaoCrcartao) then
+    FAlteracaoCrcartao := TModelDAOFactory<TAlteracaoCrcartao>.New(FConnectionConfiguracao).DAO;
+  Result := FAlteracaoCrcartao;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.AlteracaoCrcheques: iModelDAOGeneric<TAlteracaoCrcheques>;
+begin
+  if not Assigned(FAlteracaoCrcheques) then
+    FAlteracaoCrcheques := TModelDAOFactory<TAlteracaoCrcheques>.New(FConnectionConfiguracao).DAO;
+  Result := FAlteracaoCrcheques;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.AlteracaoCritens: iModelDAOGeneric<TAlteracaoCritens>;
+begin
+  if not Assigned(FAlteracaoCritens) then
+    FAlteracaoCritens := TModelDAOFactory<TAlteracaoCritens>.New(FConnectionConfiguracao).DAO;
+  Result := FAlteracaoCritens;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.Bancos: iModelDAOGeneric<TBancos>;
+begin
+  if not Assigned(FBancos) then
+    FBancos := TModelDAOFactory<TBancos>.New(FConnectionConfiguracao).DAO;
+  Result := FBancos;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.Cobranca: iModelDAOGeneric<TCobranca>;
+begin
+  if not Assigned(FCobranca) then
+    FCobranca := TModelDAOFactory<TCobranca>.New(FConnectionConfiguracao).DAO;
+  Result := FCobranca;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.CobrancaCrRemessa: iModelDAOGeneric<TCobrancaCrRemessa>;
+begin
+  if not Assigned(FCobrancaCrRemessa) then
+    FCobrancaCrRemessa := TModelDAOFactory<TCobrancaCrRemessa>.New(FConnectionConfiguracao).DAO;
+  Result := FCobrancaCrRemessa;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.CobrancaRemessa: iModelDAOGeneric<TCobrancaRemessa>;
+begin
+  if not Assigned(FCobrancaRemessa) then
+    FCobrancaRemessa := TModelDAOFactory<TCobrancaRemessa>.New(FConnectionConfiguracao).DAO;
+  Result := FCobrancaRemessa;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.ContasBancarias: iModelDAOGeneric<TContasBancarias>;
+begin
+  if not Assigned(FContasBancarias) then
+    FContasBancarias := TModelDAOFactory<TContasBancarias>.New(FConnectionConfiguracao).DAO;
+  Result := FContasBancarias;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.ContasReceber: iModelDAOGeneric<TContasReceber>;
+begin
+  if not Assigned(FContasReceber) then
+    FContasReceber := TModelDAOFactory<TContasReceber>.New(FConnectionConfiguracao).DAO;
+  Result := FContasReceber;
+end;
+
+constructor TControllerServicesFinanceiroCobrancaEntities.Create(AConnectionConfiguracao : iModelConnectionConfiguracao);
+begin
+  FConnectionConfiguracao := AConnectionConfiguracao;
+end;
+
+destructor TControllerServicesFinanceiroCobrancaEntities.Destroy;
+begin
+
+  inherited;
+end;
+
+
+class function TControllerServicesFinanceiroCobrancaEntities.New: iControllerServicesFinanceiroCobrancaEntities;
+begin
+  Result := Self.Create(nil);
+end;
+
+class function TControllerServicesFinanceiroCobrancaEntities.New(
+  AConnectionConfiguracao: iModelConnectionConfiguracao): iControllerServicesFinanceiroCobrancaEntities;
+begin
+  Result := Self.Create(AConnectionConfiguracao);
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.NotasFiscais: iModelDAOGeneric<TNotasFiscais>;
+begin
+  if not Assigned(FNotasFiscais) then
+    FNotasFiscais := TModelDAOFactory<TNotasFiscais>.New(FConnectionConfiguracao).DAO;
+  Result := FNotasFiscais;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.ParametrosGeral: iModelDAOGeneric<TParametrosGeral>;
+begin
+  if not Assigned(FParametrosGeral) then
+    FParametrosGeral := TModelDAOFactory<TParametrosGeral>.New(FConnectionConfiguracao).DAO;
+  Result := FParametrosGeral;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.RecebimentosCr: iModelDAOGeneric<TRecebimentosCr>;
+begin
+  if not Assigned(FRecebimentosCr) then
+    FRecebimentosCr := TModelDAOFactory<TRecebimentosCr>.New(FConnectionConfiguracao).DAO;
+  Result := FRecebimentosCr;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.RecebimentosCrCheques: iModelDAOGeneric<TRecebimentosCrCheques>;
+begin
+  if not Assigned(FRecebimentosCrCheques) then
+    FRecebimentosCrCheques := TModelDAOFactory<TRecebimentosCrCheques>.New(FConnectionConfiguracao).DAO;
+  Result := FRecebimentosCrCheques;
+end;
+
+function TControllerServicesFinanceiroCobrancaEntities.RecebimentosCrCr: iModelDAOGeneric<TRecebimentosCrCr>;
+begin
+  if not Assigned(FRecebimentosCrCr) then
+    FRecebimentosCrCr := TModelDAOFactory<TRecebimentosCrCr>.New(FConnectionConfiguracao).DAO;
+  Result := FRecebimentosCrCr;
+end;
+
+end.

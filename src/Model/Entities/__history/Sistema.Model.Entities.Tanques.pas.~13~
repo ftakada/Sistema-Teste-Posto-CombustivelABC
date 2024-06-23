@@ -1,0 +1,20 @@
+unit Sistema.Model.Entities.Tanques;
+
+interface
+
+
+type
+  TTanques = class
+  private
+    FID: Integer;
+    FDESCRICAO: string;
+    FTIPOCOMBUSTIVEL : Integer;
+  public
+    property ID: Integer read FID write FID;
+    property DESCRICAO: string read FDESCRICAO write FDESCRICAO;
+    property TipoCombustivel: Integer read FTipoCombustivel write FTipoCombustivel;
+  end;
+
+implementation
+
+end.
