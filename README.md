@@ -1,6 +1,11 @@
-# Sistema-Teste-Posto-CombustivelABC
- Software teste para gerenciar os abastecimentos e tanques de combustíveis
+<h1>Sistema-Teste-Posto-CombustivelABC</h1>
  
- Desenvolvido em Delphi 11 
- Banco de dados - Firebird 3 
- Gerador de relatórios - FortesReport Community Edition
+## Software teste para gerenciar os abastecimentos e tanques de combustíveis
+### Tecnologias utilizadas:
+ + Delphi 11 update 3 
+ + Firebird 3.0 
+ 
+### Dependencias:
++ FortesReport Community Edition
+   
+ 
