@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <BorlandProject>
-  <Transactions/>
-  <Default.Personality>
-    <Projects ActiveProject="C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\SistemaCombustivelTest.dproj"/>
-  </Default.Personality>
+	<Transactions/>
+	<Default.Personality>
+		<Projects ActiveProject="C:\Users\FABIO\Documents\Projetos\Github\Sistema-Teste-Posto-CombustivelABC\src\SistemaCombustivel.dproj"/>
+	</Default.Personality>
 </BorlandProject>

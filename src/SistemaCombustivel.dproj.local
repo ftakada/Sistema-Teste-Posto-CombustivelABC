@@ -86,15 +86,15 @@
     <Transaction>2024/06/22 02:42:31.000.861,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.RelatorioPadrao.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.Padrao.pas</Transaction>
     <Transaction>2024/06/22 02:43:04.000.683,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.Padrao.pas</Transaction>
     <Transaction>2024/06/22 02:45:21.000.624,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
-    <Transaction>2024/06/22 02:45:44.000.496,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.RelatorioAbastecimento.dfm=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.dfm</Transaction>
     <Transaction>2024/06/22 02:45:44.000.496,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.RelatorioAbastecimento.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
+    <Transaction>2024/06/22 02:45:44.000.496,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\View\Sistema.View.RelatorioAbastecimento.dfm=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.dfm</Transaction>
     <Transaction>2024/06/22 15:17:42.000.002,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
     <Transaction>2024/06/22 15:23:21.000.284,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Util\Sistema.Model.Util.Funcoes.pas</Transaction>
     <Transaction>2024/06/23 10:31:47.000.579,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
     <Transaction>2024/06/23 10:35:07.000.978,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Helpers\Sitema.Model.Helpers.EnterTabHelper.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
     <Transaction>2024/06/23 10:49:07.000.472,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
     <Transaction>2024/06/23 10:50:47.000.325,C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Exception\Sistema.Sitema.Model.Exception.MinhaExcecao.pas=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Unit1.pas</Transaction>
-    <Transaction>2024/06/23 16:47:21.802,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Calculos.pas</Transaction>
+    <Transaction>2024/06/23 16:47:21.000.802,=C:\Users\FABIO\Documents\Projetos\Sistema-Teste-Posto-CombustivelABC\src\Model\Services\Sistema.Model.Services.Calculos.pas</Transaction>
   </Transactions>
 	<ProjectSortOrder AutoSort="0" SortType="0">
     <File Path="Controller"/>
